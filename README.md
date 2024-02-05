@@ -4,6 +4,8 @@ Welcome to the Coding for Coding repository, a showcase for various web developm
 
 # What Techniques have been used?
 
+## Unclassified
+
 - [ ] Nest.js
 - [ ] CloudFormation
 - [ ] GraphQL
