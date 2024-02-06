@@ -6,7 +6,7 @@ Welcome to the Coding for Coding repository, a showcase for various web developm
 
 ## HTTP Response Status Codes
 
-This demonstrates the implementation of practical HTTP response status codes. Some codes have been intentionally omitted due to the following responses: 1) They are deprecated, like 102 Processing; or 2) They are inapplicable for a backend server, like 103 Early Hints.
+This demonstrates the implementation of practical HTTP response status codes. Some codes have been intentionally omitted due to the following responses: 1) They are deprecated, like 102 Processing; 2) They are inapplicable for a backend server, like 103 Early Hints; or 3) Only used in WebDAV (Web Distributed Authoring and Versioning).
 
 - [ ] 100 Continue: When uploading large files where the client needs to ensure server readiness to accept large data payloads, `100 Continue` status code is used. The client sends Expect: 100-Continue header and waits for the server to respond with 100 Continue before starting to send actual data.
   - [AWS S3 POST example](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPOST.html)
@@ -23,7 +23,13 @@ This demonstrates the implementation of practical HTTP response status codes. So
   - For example, when a client requests to delete a specific resource on the server.
 - [ ] 205 Reset Content: When the server successfully fulfilled the request and the user-agent should reset the document view, which caused the request to be made.
   - POST 후에 꼭 새로고침해서 다시 봐야할 경우가 언제 있을까?
-
+- [ ] 206 Partial Content: When the server is delivering only a part of the requested resource due to a range header sent by the client.
+  - Video streaming services: When streaming a video, the client may only download sections of data at a time.
+  - Download managers: If a user is downloading a large file, download mangers can utilize the code to break the file into sections and download them concurrently, speeding up the process.
+  - Resuming Interrupted Downloads: If a download interrupted due to network issues, once resumed, the client can send a request for the remaining part of the file.
+  - Internet speed optimization: To optimize loading times, especially for users with slower internet connections, web pages often load in parts.
+- [ ] 207 Multi-Status: When a mixture of responses exist.
+  - Batch Operations: If a client sends a single request to delete multiple resources.
 
 ## Unclassified
 
