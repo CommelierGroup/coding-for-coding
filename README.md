@@ -11,6 +11,18 @@ This demonstrates the implementation of practical HTTP response status codes. So
 - [ ] 100 Continue: When uploading large files where the client needs to ensure server readiness to accept large data payloads, `100 Continue` status code is used. The client sends Expect: 100-Continue header and waits for the server to respond with 100 Continue before starting to send actual data.
   - [AWS S3 POST example](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPOST.html)
 - [ ] 101 Switching Protocols: When initiating a WebSocket connection, this status code comes into play. Clients propose an upgrade in protocol from HTTP to WebSocket by sending a request to the server. Upon arrival, the server communicates back with a `101 Switching Protocols` response.
+- [ ] 200 OK: When the server successfully processes a client's request, the `200 OK` status code is used.
+- [ ] 201 Created: When a new resource is successfully created as a result of an HTTP request, the server send `201 Created` status code. The `Location` header often accompanies this response, containing the URI of the new resource.
+- [ ] 202 Accepted: When a server accepts a specific client request, but the processing isn't completed yet, the server returns `202 Accepted` status code. It is non-committal, in that the server cannot guarantee that the processing will succeed.
+  - An example could be a request to generate extensive reports. Suppose a client sends a request to a server to generate comprehensive yearly sales reports. This process might be time-consuming, considering the size of data involved. The server would accept the request and start the report generation process, responding with `202 Accepted` status code. The client is therefore free to continue with other operations while the server caries on with the report generation in the background.
+  - 클라이언트 요청 -> 서버 202 응답 w/ Location 헤더 -> 클라이언트 Location 헤더의 URL 요청 -> 서버 204 응답, 본문 "작업 중" -> 클라이언트 재요청 -> 서버 200 응답 완성된 자료
+- [ ] 203 Non-Authoritative Information: When the server successfully processes a request but the presented information might come from a third-party source, not the original server. This status code is commonly used in conjunction with a transforming proxy, which has modified the response data in some way. The client should be aware that the information received is not the original, potentially resulting in differences.
+  - For example, a client requests a large image file, and a transforming proxy compresses the image before delivering it ot the client to save bandwidth. The server then responds with a `203 Non-Authoritative Information` status to indicate that the information received is not exactly the same as the original server responses.
+  - For instance, consider a weather data API that gathers information from various meteorological sources.
+- [ ] 204 No Content: When a server successfully processes a client's request and there's no additional content to send in the response payload body.
+  - For example, when a client requests to delete a specific resource on the server.
+- [ ] 205 Reset Content: When the server successfully fulfilled the request and the user-agent should reset the document view, which caused the request to be made.
+  - POST 후에 꼭 새로고침해서 다시 봐야할 경우가 언제 있을까?
 
 
 ## Unclassified
