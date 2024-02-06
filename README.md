@@ -4,6 +4,15 @@ Welcome to the Coding for Coding repository, a showcase for various web developm
 
 # What Techniques have been used?
 
+## HTTP Response Status Codes
+
+This demonstrates the implementation of practical HTTP response status codes. Some codes have been intentionally omitted due to the following responses: 1) They are deprecated, like 102 Processing; or 2) They are inapplicable for a backend server, like 103 Early Hints.
+
+- [ ] 100 Continue: When uploading large files where the client needs to ensure server readiness to accept large data payloads, `100 Continue` status code is used. The client sends Expect: 100-Continue header and waits for the server to respond with 100 Continue before starting to send actual data.
+  - [AWS S3 POST example](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPOST.html)
+- [ ] 101 Switching Protocols: When initiating a WebSocket connection, this status code comes into play. Clients propose an upgrade in protocol from HTTP to WebSocket by sending a request to the server. Upon arrival, the server communicates back with a `101 Switching Protocols` response.
+
+
 ## Unclassified
 
 - [ ] Nest.js
