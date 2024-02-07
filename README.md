@@ -96,3 +96,4 @@ Welcome to the Coding for Coding repository, a showcase for various web developm
 - [ ] Server Timing Metrics: Metrics to measure where server time is spent while loading the application.
 - [ ] Service Discovery: Enables automatic detection of services offered by a system.
 - [ ] tRPC
+- [ ] Apache Kafka
