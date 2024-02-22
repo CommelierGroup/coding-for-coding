@@ -106,3 +106,4 @@ Welcome to the Coding for Coding repository, a showcase for various web developm
 - [ ] Human Psychology
 - [ ] Redis
 - [ ] MemCached
+- [ ] Apache Kafka
