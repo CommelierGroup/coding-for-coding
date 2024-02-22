@@ -53,6 +53,7 @@ Welcome to the Coding for Coding repository, a showcase for various web developm
 - [ ] Error Tracking and Exception Handling
 - [ ] Messge Queues and Asynchronous Processing
 - [ ] Microservices Observability: Communication between microservices can sometimes be complex and difficult to monitor. Tools like Istio and Linkerd provide the ability to visualize, control, and secure thr traffic between services.
+- [ ] Open Telemetry
 - [ ] Feature Flagging: This development methodology can help make feature rollouts less risky and more steady. It enables developers to hid, enable or disable the feature in production, so they can safely test and release new features.
 - [ ] Blud-Green Deployments
 - [ ] Localization and Internationalization
@@ -96,4 +97,13 @@ Welcome to the Coding for Coding repository, a showcase for various web developm
 - [ ] Server Timing Metrics: Metrics to measure where server time is spent while loading the application.
 - [ ] Service Discovery: Enables automatic detection of services offered by a system.
 - [ ] tRPC
+- [ ] Terraform
+- [ ] k8s
+- [ ] Firebase
+- [ ] Rust
+- [ ] Linux
+- [ ] Compiler
+- [ ] Human Psychology
+- [ ] Redis
+- [ ] MemCached
 - [ ] Apache Kafka
