@@ -134,3 +134,4 @@ This demonstrates the implementation of practical HTTP response status codes. So
 - [ ] Redis
 - [ ] MemCached
 - [ ] Apache Kafka
+- [x] [Go Concurrency (Gorutine, Mutex, Shemaphore, Channel...)](https://github.com/CommelierGroup/go-concurrency)
