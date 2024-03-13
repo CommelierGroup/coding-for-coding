@@ -124,7 +124,7 @@ This demonstrates the implementation of practical HTTP response status codes. So
 - [ ] Server Timing Metrics: Metrics to measure where server time is spent while loading the application.
 - [ ] Service Discovery: Enables automatic detection of services offered by a system.
 - [ ] tRPC
-- [ ] Terraform
+- [x] Terraform - [Repository](https://github.com/CommelierGroup/Terraform)
 - [ ] k8s
 - [ ] Firebase
 - [ ] Rust
