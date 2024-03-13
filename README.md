@@ -117,7 +117,7 @@ This demonstrates the implementation of practical HTTP response status codes. So
   - [express-http-2](https://github.com/CommelierGroup/express-http-2)
 - [ ] HTTP/3
 - [ ] HTTP Caching Strategy
-- [ ] Server-Sent Event (SSE)
+- [ ] [Server-Sent Event (SSE)](https://github.com/CommelierGroup/node-server-sent-events)
 - [ ] Docker Compose
 - [ ] Elastic STack
 - [ ] GraphQL Federation
